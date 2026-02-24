@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.1 (2026-02-24)
+
+* Fix: Replace deprecated `ActiveSupport::Configurable` with plain Ruby `attr_accessor` for Rails 8.1+ compatibility
+
 ## 1.0.0 (2018-08-28)
 
 * Breaking change: Remove dependency on view_context [Issue #288](https://github.com/jbox-web/ajax-datatables-rails/issues/288)
