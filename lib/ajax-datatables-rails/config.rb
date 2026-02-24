@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'active_support/configurable'
-
 module AjaxDatatablesRails
 
   # Configure AjaxDatatablesRails global settings
@@ -20,9 +18,11 @@ module AjaxDatatablesRails
   end
 
   class Configuration
-    include ActiveSupport::Configurable
+    attr_accessor :db_adapter, :nulls_last
 
-    config_accessor(:db_adapter) { :postgresql }
-    config_accessor(:nulls_last) { false }
+    def initialize
+      @db_adapter = :postgresql
+      @nulls_last = false
+    end
   end
 end
